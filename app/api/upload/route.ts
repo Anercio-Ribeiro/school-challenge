@@ -4,6 +4,61 @@ import { NextApiRequest } from 'next';
 import { NextResponse } from 'next/server';
 const prisma = new PrismaClient();
 
+
+/**
+ * @swagger
+ * /api/upload:
+ *   post:
+ *     summary: Insert multiple schools
+ *     description: Insert multiple school records from a JSON array
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: array
+ *             items:
+ *               type: object
+ *               properties:
+ *                 nome:
+ *                   type: string
+ *                 email:
+ *                   type: string
+ *                 provincia:
+ *                   type: string
+ *                 numeroDeSala:
+ *                   type: integer
+ *     responses:
+ *       200:
+ *         description: Data inserted successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *       400:
+ *         description: Error parsing data or invalid data format
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ *       405:
+ *         description: Method not allowed
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 error:
+ *                   type: string
+ */
+
+
 async function extractDataFromStream(stream: ReadableStream): Promise<string> {
   const reader = stream.getReader();
   const decoder = new TextDecoder();
