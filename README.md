@@ -1,16 +1,15 @@
-# CRUD NEXT JS WITH PRISMA
+Este projecto é um CRUD feito em Next.js typescript, tailwind, daisyUi, com prisma, SQL server e swagger UI
 
-hello my name is mikhael hosea, i created this repository with the aim of training new skills, namely nextjs with prism, a software for managing databases
+Configurar o projecto na máquina local:
 
+1- instalar instalar o sql server e definir a string connection no ficheiro .env ou .env.local
 
-First, run the development server:
+2- Instalar dependências npm
+npm i ou npm install
 
-```bash
-# for run migrate database
+3- gerar migrations na base de dados
 npx prisma migrate dev
-# for start development server
-npm run dev
-```
-and you have to set the .env tou your database name and user,password before you run prisma migrate then
 
-Open [http://localhost:3000/products](http://localhost:3000/products) with your browser to see the result.
+4- Rodar o projecto
+npm run dev
+
