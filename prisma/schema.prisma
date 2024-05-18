@@ -1,0 +1,31 @@
+generator client {
+    provider      = "prisma-client-js"
+    previewFeatures = ["jsonProtocol"]
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x", "linux-musl-openssl-3.0.x", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+// model Escola {
+//   id             String      @id @default(uuid())
+//   nome           String
+//   email         String
+//   provincia    String
+//   numeroDeSala Int
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+// }
+
+
+model Escola {
+  id             Int      @id @default(autoincrement())
+  nome           String @db.NVarChar(255)
+  email         String  @db.NVarChar(255)
+  provincia    String @db.NVarChar(255)
+  numeroDeSala Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

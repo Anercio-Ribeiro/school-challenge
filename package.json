@@ -1,0 +1,42 @@
+{
+  "name": "ujian",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "@types/xlsx": "^0.0.36",
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "csv-parser": "^3.0.0",
+    "daisyui": "^4.4.19",
+    "formidable": "^3.5.1",
+    "next": "14.0.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.0",
+    "react-paginate": "^8.2.0",
+    "react-select": "^5.8.0",
+    "web-streams-polyfill": "^4.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/formidable": "^3.4.5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8",
+    "prisma": "^5.13.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
